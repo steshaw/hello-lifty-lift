@@ -2,3 +2,8 @@ target/
 lib_managed/
 src_managed/
 project/boot/
+
+# Ignore IntelliJ IDEA files - for now at least.
+.idea/
+hello-lifty-lift.iml
+project/project.iml

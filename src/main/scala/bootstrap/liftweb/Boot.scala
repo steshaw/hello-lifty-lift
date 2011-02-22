@@ -1,5 +1,3 @@
-
-
 package bootstrap.liftweb
 
 import net.liftweb._
@@ -7,11 +5,9 @@ import http.{LiftRules, NotFoundAsTemplate, ParsePath}
 import sitemap.{SiteMap, Menu, Loc}
 import util.{ NamedPF }
 
-
 class Boot {
+
   def boot {
-  
-  
     // where to search snippet
     LiftRules.addToPackages("au.com.codefu.hello")
 
@@ -23,12 +19,11 @@ class Boot {
       case (req,failure) => NotFoundAsTemplate(
         ParsePath(List("exceptions","404"),"html",false,false))
     })
-    
+
     LiftRules.setSiteMap(SiteMap(entries:_*))
-    
+
     // set character encoding
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
-    
-    
   }
+
 }
