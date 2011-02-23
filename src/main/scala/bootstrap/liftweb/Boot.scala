@@ -14,7 +14,7 @@ class Boot {
     // build sitemap
     val entries = List(Menu("Home") / "index") :::
                   Nil
-    
+
     LiftRules.uriNotFound.prepend(NamedPF("404handler"){
       case (req,failure) => NotFoundAsTemplate(
         ParsePath(List("exceptions","404"),"html",false,false))
